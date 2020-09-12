@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+                <link rel="stylesheet" href="firstpage.css">          
+            <link rel="stylesheet" href="home.css">
+            <link rel="stylesheet" href="about.css">
+            <link rel="stylesheet" href="skill.css">
+            <link rel="stylesheet" href="contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
+    <script type="text/javascript" src="pro.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.0/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.0/angular-route.min.js"></script>
+
+</head>
+<body ng-app="bookEasy" ng-controller ="booking"> 
+  <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" id="demo">
+            <li><a href="firstpage.html#!/home" id="default" onclick="highlite(this);">Home</a></li>
+            <li><a href="firstpage.html#!/about" onclick="highlite(this);">About</a></li>
+            <li><a href="#" onclick="highlite(this);">Work</a></li>
+            <li><a href="firstpage.html#!/skill" onclick="highlite(this);">Skill</a></li>
+            <li><a href="firstpage.html#!/contact" onclick="highlite(this);">Contact</a></li>
+        </ul>
+    </nav>
+  <div ng-view></div>
+        
+        <script type="text/javascript" src="app.js"></script> 
+        <script type="text/javascript" src="main.js"></script> 
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script> 
+        <script type="text/javascript" src="tilt.jquery.min.js"></script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
