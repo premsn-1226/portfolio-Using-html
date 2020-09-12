@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Patua+One&family=Rubik:ital,wght@0,300;0,400;1,300&family=Sniglet&display=swap');
+
+*{
+	margin : 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+    font-family: 'sans-serif';
+     scroll-behavior: smooth;
+} 
+nav{
+    height : 10vh;
+    background : #252627;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    width : 50%;
+    height : 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+.nav-links li a{
+    text-decoration-line: none;
+	font-size: 23px;
+	color: whitesmoke;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+li a:hover{
+    font-size: 25px;
+    color: brown;
+    transition: .3s;	
+}
+li a.active{
+    color: brown;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+/*name home*/
+.container{
+  overflow : hidden;
+}
+header{
+    opacity : 0.9;
+}
+header .row .col-md-5{
+    padding : 4vmin 0.5vmin;
+}
+header .row .col-md-7{
+    padding : 22vmin 1vmin;
+    padding-bottom: 35vmin;
+    font-family: var(--Rubik);
+}
+#textcol{
+    letter-spacing: 4px;
+}
+header .row .col-md-5 img{
+    width : 100%;
+    opacity : 1;
+    border-radius : 10px;
+}
+header .container .col-md-7 h3{
+    padding : 1vmin;
+  font-family : sniglet;
+    letter-spacing: 4px;
+    color : blue;
+}
+header .container .col-md-7 h1{
+    font-size: 8vmin;
+    font-family : lobster;
+    padding: 0.1em 0em;
+}
+header .row .col-md-7 h4{
+    padding : 2vmin 2vmin;
+   margin-right : 50px;
+  left : 30px;
+    color:white;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+#front {
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: sniglet;  
+  font-size: 35px;
+  position: relative;
+}
+#front {
+  animation: animated 2s steps(30,end) 1s 1 normal both;
+}
+@keyframes animated{
+  from{width: 10px;}
+  to{width: 560px;}
+}
+
+
+header .container .col-md-7 button{
+  border : 2px sloid lightgreen;
+ border-radius: 30px;
+ font-weight: bold;
+  margin-top : 10px;
+  
+}
+header .container .col-md-7 button:hover{
+ border-radius: 30px;
+ font-weight: bold;
+  font-size: 20px;
+  background : black;
+  color : lightgreen;
+  transition : all 0.5s ease-in;
+  
+  
+}
+#textcol{
+    letter-spacing: 4px;
+}
+
+
+
+
+/*social icons*/
+
+
+.social-icons1{
+    position: fixed;
+    left: 300px;
+    bottom: 8%; 
+}
+
+ 
+.social-icons1 ul li{
+    width: 70px;
+    height: 80px;
+    display: block;
+}
+
+.social-icons1 ul li a{
+    display: block;
+    position : absolute;
+    color: black;
+    left : -280px;
+    text-align: left;
+    padding: 0px 10px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+#facebook:hover{
+    color : white;
+    font-size: 35px;
+    background: #3b5998;
+}
+#insta:hover{
+    font-size: 33px;
+    color : white;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+#linked:hover{
+    font-size: 33px;
+    color: white;
+    background : #0e76a8;
+}
+#github:hover{
+    font-size: 33px;
+    color : white;
+    background: #333;
+}
+
+
+@media only screen and (max-width : 790px){
+    .line{
+        width : 30px;
+        height : 3px;
+        background: white;
+        margin : 5px;
+    }
+    nav{
+        position: relative;
+        z-index : 1;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right : 5%;
+        top : 50%;
+        transform : translate(-5%,-50%);
+        z-index: 1;
+    }
+	.nav-links{
+        position: relative;
+        background: #272727;
+		    width : 100%;
+        height: 100vh;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path : circle(100px at 90% -10%);
+        transition: all 0.7s ease-out;
+    }
+    .nav-links.open{
+        clip-path: circle(1700px at 90% -10%);
+        -webkit-clip-path : circle(1700px at 90% -10%);
+    }
+    .nav-links li a.close{
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path : circle(100px at 90% -10%);
+      display : none;
+    }
+    .nav-links li{
+        opacity: 0;
+      
+    }
+    .nav-links li a{
+        font-size: 30px;
+        
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.3s;
+      margin-top : -200px;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.4s;
+      margin-top : -200px;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.5s;
+      margin-top : -200px;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.6s;
+      margin-top : -200px;
+    }
+    li.fa{
+        opacity: 1;
+    }
+  
+  li a:hover{
+    font-size: 35px;
+    color: brown;
+    transition: .3s;	
+}
+li a.active{
+    color: brown;
+    border-radius: 20px;
+    font-size: 35px;
+}
+
+    /*name home*/
+  header{
+    overflow : hidden;
+  }
+    header .row .col-sm-12 h3{
+    padding : 1vmin;
+    letter-spacing: 2px;
+    color : #470098;
+      font-size: 30px;
+}
+header .row .col-sm-12 h1{
+    font-size: 11vmin;
+    padding: 0.1em 0em;
+    
+}
+header .row .col-sm-12 h4{
+    padding : 3vmin 3vmin;
+    left : 20px;
+    font-size : 30px;
+    color:white;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+#front {
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: sniglet;  
+  font-size: 20px;
+  position: relative;
+}
+#front {
+  animation: animated 1.5s steps(30,end) 1s 1 normal both;
+}
+@keyframes animated{
+  from{width: 10px;}
+  to{width: 330px;}
+}
+
+#textcol{
+    letter-spacing: 2px;
+}
+    header .row .col-sm-12{
+        padding : 8vmin 3vmin;
+        padding-bottom: 10vmin;
+        font-family: rubik;
+    }
+    
+    header .row .col-sm-12 img{
+    width : 100%;
+    opacity : 0.75;
+    border-radius : 10px;
+    height : 350px;
+    margin-top:-30px;
+    }
+
+    /*social icons*/
+     .social-icons1{
+        position: fixed;
+       padding : 5px;
+       background : white;
+        left: 45px; 
+        bottom: 0%; 
+    }
+    
+     
+    .social-icons1 ul li{
+        width: 70px;
+        height: 20px;
+        display: inline-block;
+    }
+    
+    .social-icons1 ul li a{
+        display: block;
+        color: black;
+      position : inherit;
+        text-align: center;
+        padding : -10px -10px;
+        font-size: 30px;
+        font-weight: 700;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.6s;
+    }
+    
+}
+
+@media only screen and (min-width : 790px) and (max-width : 1100px){
+    
+    .nav-links{
+        display: flex;
+        list-style: none;
+        width : 100%;
+        height : 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: auto;
+    }
+  .nav-links li a{
+    text-decoration-line: none;
+	font-size: 36px;
+	color: whitesmoke;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  }
+  li a:hover{
+    font-size: 40px;
+    color: brown;
+    transition: all .3s;	
+  }
+  li a.active{
+    color: brown;
+    border-radius: 20px;
+    font-size: 40px;
+  }
+   /*name home*/
+  header{
+    overflow : hidden;
+  }
+    header .row .col-sm-12 h4{
+    padding : 1vmin;
+    letter-spacing: 2px;
+    color : #470098;
+     margin-left : -100px; 
+      font-size: 70px;
+}
+header .row .col-sm-12 h1{
+    font-size: 9vmin;
+    margin-left : -100px;
+    padding: 0.1em 0em;
+    
+}
+header .row .col-md-7 p{
+    padding : 3vmin 3vmin;
+    margin-left : -130px;
+    margin-top : 100px;
+    color:white;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+#front {
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: sniglet;  
+  font-size: 50px;
+  position: relative;
+}
+#front {
+  animation: animated 1.5s steps(30,end) 1s 1 normal both;
+}
+@keyframes animated{
+  from{width: 10px;}
+  to{width: 760px;}
+}
+
+#textcol{
+    letter-spacing: 2px;
+}
+    header .row .col-sm-12{
+        padding : 8vmin 3vmin;
+        padding-bottom: 10vmin;
+        font-family: rubik;
+    }
+  header .container .col-md-7 button{
+    margin-top : 100px;
+    margin-left : 140px;
+    font-size : 60px;
+  }
+  header .container .col-md-7 button:hover{
+    margin-top : 100px;
+    margin-left : 140px;
+    font-size : 65px;
+  }
+    
+    header .container .col-md-5 img{
+    width : 100%;
+    opacity : 0.75;
+    border-radius : 10px;
+    height : 300px;
+    margin-left : 40px;
+    }
+  
+
+    /*social icons*/
+     .social-icons1{
+        position: fixed;
+       padding : 5px;
+       background : white;
+        left: 45px; 
+        bottom: 30%; 
+    }
+    
+     
+    .social-icons1 ul li{
+        width: 200px;
+        height: 20px;
+        display: inline-block;
+    }
+    
+    .social-icons1 ul li a{
+        display: block;
+        color: black;
+      position : inherit;
+        text-align: center;
+        padding : 10px 10px;
+        font-size: 90px;
+        font-weight: 700;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.6s;
+    }
+  #facebook:hover{
+    color : white;
+    font-size: 95px;
+    background: #3b5998;
+}
+#insta:hover{
+    font-size: 95px;
+    color : white;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+#linked:hover{
+    font-size: 95px;
+    color: white;
+    background : #0e76a8;
+}
+#github:hover{
+    font-size: 95px;
+    color : white;
+    background: #333;
+}
+    
+}
+
